@@ -1,0 +1,53 @@
+{
+  "input_dir": "/home/robbie/tyf_file/startup/lightMind/code_ui_ar/leqi_ui",
+  "output_dir": "/home/robbie/tyf_file/startup/lightMind/code_ui_ar/green_extract_output",
+  "total_images": 16,
+  "processed_images": 16,
+  "total_candidates": 1089,
+  "filtered_by_reason": {
+    "too_small_area": 1374,
+    "too_small_size": 25,
+    "too_extreme_aspect": 7,
+    "bbox_too_large_vs_image": 6
+  },
+  "error_count": 0,
+  "errors": [],
+  "config_used": {
+    "recursive": true,
+    "limit": null,
+    "save_masks": true,
+    "save_debug_overlays": true,
+    "color_threshold": {
+      "h_min": 35,
+      "h_max": 92,
+      "s_min": 45,
+      "v_min": 55,
+      "v_max": 255,
+      "weak_green": {
+        "enabled": true,
+        "h_min": 30,
+        "h_max": 100,
+        "s_min": 28,
+        "v_min": 38,
+        "v_max": 255
+      }
+    },
+    "morphology": {
+      "open_kernel": 3,
+      "close_kernel": 5,
+      "dilate_iter": 1,
+      "erode_iter": 0
+    },
+    "filter": {
+      "component_min_area": 40,
+      "component_max_area": null,
+      "min_area": 120,
+      "max_area": null,
+      "min_width": 10,
+      "min_height": 10,
+      "max_aspect_ratio": 8.0,
+      "max_bbox_ratio": 0.45,
+      "padding": 4
+    }
+  }
+}
