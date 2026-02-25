@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LightMind Green HUD UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>LightMind HUD Components</h1>
+    <div class="controls" id="controls">
+      <label>
+        主色
+        <input id="control-color" type="color" value="#67f08a" />
+      </label>
+      <label>
+        线宽
+        <input id="control-stroke" type="range" min="1" max="3.5" step="0.1" value="1.8" />
+        <span id="value-stroke">1.8</span>
+      </label>
+      <label>
+        发光
+        <input id="control-glow" type="range" min="0" max="1.2" step="0.05" value="0.55" />
+        <span id="value-glow">0.55</span>
+      </label>
+      <label>
+        圆角
+        <input id="control-radius" type="range" min="6" max="26" step="1" value="14" />
+        <span id="value-radius">14</span>
+      </label>
+      <label>
+        缩放
+        <input id="control-scale" type="range" min="0.8" max="1.4" step="0.05" value="1" />
+        <span id="value-scale">1.00</span>
+      </label>
+      <label>
+        填充透明
+        <input id="control-fill" type="range" min="0" max="0.28" step="0.01" value="0.12" />
+        <span id="value-fill">0.12</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="gallery" id="gallery"></main>
+
+  <template id="component-template">
+    <article class="component-card">
+      <h2 class="component-title"></h2>
+      <div class="preview-shell">
+        <div class="checkerboard"></div>
+        <div class="svg-stage"></div>
+      </div>
+      <div class="actions">
+        <button type="button" data-action="svg">导出 SVG</button>
+        <button type="button" data-action="png">导出 PNG</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
